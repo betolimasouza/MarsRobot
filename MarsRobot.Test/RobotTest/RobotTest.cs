@@ -23,6 +23,7 @@ namespace MarsRobot.Test.RobotTest
 
         [Test]
         [TestCase("FFRFLFLF", 4, 1, Direction.West)]
+        [TestCase("FFRFFFFLFLFRRFF", 4, 6, Direction.East)]
         public void GetFinalLocation(string instructions, int targetX, int targetY, Direction targetDirection)
         {
             var (finalX, finalY, direction) = robot.GetInstructionsAndReturnsFinalLocation(instructions);
@@ -33,14 +34,15 @@ namespace MarsRobot.Test.RobotTest
         }
 
         [Test]
-        public void MoveRobotTest()
+        [TestCase(2, 1, Direction.North)]
+        public void MoveRobotTest(int targetX, int targetY, Direction targetDirection)
         {
             robot.MoveRobot();
             var (currX, currY, currDirection) = robot.GetCurrentLocationAndDirection();
 
-            Assert.AreEqual(2, currX);
-            Assert.AreEqual(1, currY);
-            Assert.AreEqual(Direction.North, currDirection);
+            Assert.AreEqual(targetX, currX);
+            Assert.AreEqual(targetY, currY);
+            Assert.AreEqual(targetDirection, currDirection);
         }
 
     }
