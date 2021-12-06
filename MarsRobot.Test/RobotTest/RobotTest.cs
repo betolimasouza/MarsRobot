@@ -24,6 +24,7 @@ namespace MarsRobot.Test.RobotTest
         [Test]
         [TestCase("FFRFLFLF", 4, 1, Direction.West)]
         [TestCase("FFRFFFFLFLFRRFF", 4, 6, Direction.East)]
+        [TestCase("FFRFFRFL", 2, 3, Direction.West)]
         public void GetFinalLocation(string instructions, int targetX, int targetY, Direction targetDirection)
         {
             var (finalX, finalY, direction) = robot.GetInstructionsAndReturnsFinalLocation(instructions);
