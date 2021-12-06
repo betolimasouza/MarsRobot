@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "MarsRobot/1.0.0": {
+        "dependencies": {
+          "MarsRobot.Business": "1.0.0"
+        },
+        "runtime": {
+          "MarsRobot.dll": {}
+        }
+      },
+      "MarsRobot.Business/1.0.0": {
+        "runtime": {
+          "MarsRobot.Business.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MarsRobot/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MarsRobot.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
