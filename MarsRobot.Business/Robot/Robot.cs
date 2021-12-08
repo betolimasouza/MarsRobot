@@ -33,7 +33,7 @@ namespace MarsRobot.Business.Robot
                     MoveRobot();
             }
 
-            return (currentX, currentY, currentDirection);
+            return GetCurrentLocationAndDirection();
         }
 
         public (int, int, Direction) GetCurrentLocationAndDirection()

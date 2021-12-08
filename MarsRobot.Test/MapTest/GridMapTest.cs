@@ -15,11 +15,11 @@ namespace MarsRobot.Test.Map
         [TestCase(10, 10, 11, 11, false)]
         [TestCase(10, 10, 10, 10, true)]
         [TestCase(5, 5, 1, 2, true)]
-        public void CheckValidLocation(int mapX, int mapY, int newX, int newY, bool result)
+        public void CheckValidLocation(int mapX, int mapY, int newX, int newY, bool targetResult)
         {
             var map = new GridMap(mapX, mapY);
             var isValid = map.IsLocationValid(newX, newY);
-            Assert.AreEqual(result, isValid);
+            Assert.AreEqual(targetResult, isValid);
         }
 
         [Test]

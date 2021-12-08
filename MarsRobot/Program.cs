@@ -24,12 +24,13 @@ namespace MarsRobot
                     validGrid = true;
             }
 
+            var map = new GridMap(coordX, coordY);
+            Console.WriteLine(map.PaintMap(1, 1, Direction.North));
+
             Console.WriteLine("Robot instructions:");
             instructions = Console.ReadLine();
 
-            var map = new GridMap(coordX, coordY);
             var robot = new Robot(map);
-
             var (finalX, finalY, finalDirection) = robot.GetInstructionsAndReturnsFinalLocation(instructions);
 
             Console.WriteLine($"Final coordinates: X: {finalX}, Y: {finalY} - Direction: {finalDirection}");

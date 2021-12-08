@@ -19,10 +19,10 @@ namespace MarsRobot.Test.RobotTest
         [TestCase(Direction.East, "R", Direction.South)]
         [TestCase(Direction.South, "R", Direction.East)]
         [TestCase(Direction.West, "R", Direction.North)]
-        public void TestDirection(Direction currentDirection, string turnDirection, Direction finalDirection)
+        public void TestDirection(Direction currentDirection, string turnDirection, Direction targetDirection)
         {
             var newDirection = DirectionChanger.ChangeDirection(currentDirection, turnDirection);
-            Assert.AreEqual(finalDirection, newDirection);
+            Assert.AreEqual(targetDirection, newDirection);
         }
     }
 }
